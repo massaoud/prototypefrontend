@@ -1,21 +1,21 @@
 // Override default variables before the import
-$font-family-base:
-"Roboto",
--apple-system,
+$font-family-base: 'Roboto', -apple-system,
   // Chrome < 56 for macOS (San Francisco)
-  BlinkMacSystemFont,
+    BlinkMacSystemFont,
   // Windows
-   "Roboto",
+    'Roboto',
   // Android
-  "Roboto",
+    'Roboto',
   // Basic web fallback
-  "Helvetica Neue", Arial, sans-serif,
+    'Helvetica Neue',
+  Arial, sans-serif,
   // Emoji fonts
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-  
-  $theme-colors: (
-  "primary": #e4cd65e5,
-  "danger": #ff4136
+    'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+
+$theme-colors: (
+  'primary': #e4cd65e5,
+  'danger': #ff4136
 );
 //$theme-colors: map-remove($theme-colors, "info", "light", "dark");
 $body-bg: #000;
@@ -23,14 +23,12 @@ $body-color: #fff;
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
 
-
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
 }
 
-
-.img{
-  height: 40px;
-  width: 40px;
+.img {
+  height: 35px;
+  width: 35px;
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Collapse, Button } from 'reactstrap';
+import { Collapse } from 'reactstrap';
 import logo from './images/logo.svg';
 import { task1Api, task2Api, task3Api, task4Api } from './services/taskService';
 
@@ -12,14 +12,12 @@ const App = () => {
 
   const toggle = () => {
     setIsOpen(!isOpen);
-    if(isOpen ===false)
-    {
+    if (isOpen === false) {
       task1Service();
       task2Service();
       task3Service();
       task4Service();
     }
-   
   };
 
   /** CALL OF TASK1 SERVICE  */
@@ -63,25 +61,32 @@ const App = () => {
 
   return (
     <div className="container">
-      <div className="col-md-8 offset-md-2">
-        <div className="row">
-          <img
-            className="rounded img  App-logo"
-            src={logo}
-            className="App-logo"
-            alt="logo"
-          />
+      <div class="row">
+        <div class="col-sm-4 col-md-3"></div>
+        <div className="col-sm-4 col-md-6 col-12">
+          <div className="row">
+            ​
+            <picture>
+              <img src={logo} className="img-fluid " alt="logo" />
+            </picture>
+          </div>
         </div>
-        </div>
-        <div className="col-md-4 offset-md-4">
-        <div className="row m-1">
-          <Button color="primary" className="mb-2 " onClick={toggle}>
-            Do. Or do not. There is no try.
-          </Button>
-        </div>
+        <div class="col-sm-4 col-md-3"></div>
       </div>
-      <div className="col-md-10 offset-md-1">
-        <div className="row text-center">
+      <div class="row">
+        <div class="col-sm-4 col-md-3"></div>
+        <div class=" col-sm-4  col-md-6 col-12">
+          <div class="text-center mb-2">
+            <button class="btn btn-primary" onClick={toggle}>
+              Do. Or do not. There is no try.
+            </button>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-1"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 col-md-1 col-12"></div>
+        <div className="col-sm-4 col-md-10 col-12 text-center">
           <Collapse isOpen={isOpen}>
             <div>
               <h5>
@@ -151,6 +156,7 @@ const App = () => {
             </div>
           </Collapse>
         </div>
+        <div class="col-sm-4 col-md-1 col-12"></div>
       </div>
     </div>
   );
